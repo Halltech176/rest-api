@@ -44,6 +44,7 @@ const developmentError = (err, res) => {
 };
 
 exports.globalError = (err, req, res, next) => {
+  console.log(err);
   err.status = err.status || "error";
   err.statusCode = err.statusCode || 400;
 
