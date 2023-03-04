@@ -1,0 +1,159 @@
+
+     .mb0 {
+      margin-bottom: 0; 
+      }
+      
+      .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0; 
+      }
+      
+      .powered-by a {
+      text-decoration: none; 
+      }
+      
+      hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      margin: 20px 0; 
+      }
+      
+      /* -------------------------------------
+      RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+      table.body h1 {
+      font-size: 28px !important;
+      margin-bottom: 10px !important; 
+      }
+      table.body p,
+      table.body ul,
+      table.body ol,
+      table.body td,
+      table.body span,
+      table.body a {
+      font-size: 16px !important; 
+      }
+      table.body .wrapper,
+      table.body .article {
+      padding: 10px !important; 
+      }
+      table.body .content {
+      padding: 0 !important; 
+      }
+      table.body .container {
+      padding: 0 !important;
+      width: 100% !important; 
+      }
+      table.body .main {
+      border-left-width: 0 !important;
+      border-radius: 0 !important;
+      border-right-width: 0 !important; 
+      }
+      table.body .btn table {
+      width: 100% !important; 
+      }
+      table.body .btn a {
+      width: 100% !important; 
+      }
+      table.body .img-responsive {
+      height: auto !important;
+      max-width: 100% !important;
+      width: auto !important; 
+      }
+      }
+      
+      /* -------------------------------------
+      PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+      .ExternalClass {
+      width: 100%; 
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+      line-height: 100%; 
+      }
+      .apple-link a {
+      color: inherit !important;
+      font-family: inherit !important;
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      text-decoration: none !important; 
+      }
+      #MessageViewBody a {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      }
+      .btn-primary table td:hover {
+      background-color: #34495e !important; 
+      }
+      .btn-primary a:hover {
+      background-color: #34495e !important;
+      border-color: #34495e !important; 
+      } 
+      }
+  body
+    span.preheader This is preheader text. Some clients will show this text as a preview.
+    table.body(role="presentation", border="0", cellpadding="0", cellspacing="0")
+      tr
+        td &amp;nbsp;
+        td.container
+          .content
+            // START CENTERED WHITE CONTAINER
+            table.main(role="presentation")
+              // START MAIN CONTENT AREA
+              tr
+                td.wrapper
+                  table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                    tr
+                      td
+                        p Hi there,
+                        p Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.
+                        table.btn.btn-primary(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                          tbody
+                            tr
+                              td(align="left")
+                                table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                                  tbody
+                                    tr
+                                      td
+                                        a(href="http://htmlemail.io", target="_blank") Welcome to RestAPI
+                        p This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.
+                        p Good luck! Hope it works.
+              // END MAIN CONTENT AREA
+            // END CENTERED WHITE CONTAINER
+            // START FOOTER
+            .footer
+              table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                tr
+                  td.content-block
+                    span.apple-link Company Inc, 3 Abbey Road, San Francisco CA 94102
+                    br
+                    | Don&apos;t like these emails?
+                    a(href="http://i.imgur.com/CScmqnj.gif") Unsubscribe
+                    | .
+                tr
+                  td.content-block.powered-by
+                    | Powered by
+                    a(href="http://htmlemail.io") HTMLemail
+                    | .
+            // END FOOTER
+        td &amp;nbsp;
