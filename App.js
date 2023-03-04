@@ -16,6 +16,7 @@ const UserRoutes = require("./routes/user");
 const commentRoutes = require("./routes/comment");
 const adminRoutes = require("./routes/admin");
 const checkoutRoutes = require("./routes/checkout");
+const compression = require("compression");
 
 const app = express();
 
@@ -56,7 +57,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
-
+app.use(compression());
 // Routes
 app.use(`${process.env.BASE_URL}/auth`, AuthRoutes);
 app.use(`${process.env.BASE_URL}`, PostRoutes);

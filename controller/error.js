@@ -1,6 +1,5 @@
 const AppError = require("../utils/apiError");
 const productionError = (err, res) => {
-  console.log(err);
   if (!err.isOperational) {
     return res.status(500).json({
       message: "something realy went wrong",
@@ -14,7 +13,6 @@ const productionError = (err, res) => {
 };
 
 const handleCastError = (err) => {
-  console.log("this is a cast error");
   const message = `invalid ${err.path} : ${err.value}`;
   return new AppError(message, 400);
 };
@@ -48,7 +46,7 @@ const developmentError = (err, res) => {
 exports.globalError = (err, req, res, next) => {
   err.status = err.status || "error";
   err.statusCode = err.statusCode || 400;
-  console.log(err);
+
   if (process.env.NODE_ENV !== "production") {
     if (err.name === "CastError") {
       let error = { ...err };

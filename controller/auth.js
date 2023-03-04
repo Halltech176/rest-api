@@ -134,7 +134,6 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
       message: "Check your e-mail to reset your password",
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       status: "fail",
       message: "something went wrong please retry again.",
@@ -155,8 +154,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     passwordResetToken: hashedToken,
     passwordResetExpires: { $gt: Date.now() },
   });
-  console.log(user);
-  console.log(hashedToken);
+
   if (!user) {
     return next(new AppError("invalid token or the token as expired", 401));
   }
@@ -169,7 +167,6 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: true });
 
-  // console.log(token);
   createSendToken(200, user, "password reset successfully", res);
 });
 

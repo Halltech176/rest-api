@@ -27,7 +27,7 @@ exports.uploadPostImages = upload.fields([
 
 exports.resizePostImage = catchAsync(async (req, res, next) => {
   if (!req.files.coverImage || !req.files.images) return next();
-  console.log(req.files);
+
   // processing the cover image
   req.body.coverImage = `post-${req.params.id}-${Date.now()}-cover.jpeg`;
   await sharp(req.files.coverImage[0].buffer)
